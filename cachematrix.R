@@ -6,7 +6,7 @@
 # and it returns functions for getting and setting
 # the matrix and inverse
 makeCacheMatrix <- function(x = matrix()) {
-    inv = NULL
+    inv <- NULL
     getMatrix <- function() {
         x
     }
@@ -33,7 +33,7 @@ cacheSolve <- function(x, ...) {
     ## Return a matrix that is the inverse of 'x'
     inv <- x$getInverse()
     if (is.null(inv)) {
-        mtrx = x$getMatrix()
+        mtrx <- x$getMatrix()
         inv <- solve(mtrx, ...)
         x$setInverse(inv)
     }
